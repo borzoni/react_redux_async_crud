@@ -49,11 +49,11 @@ export default function(state = INITIAL_STATE, action) {
      return { ...state, current: {...state.current, error: action.payload.message, loading: false}};
   
   case UPDATE_ORDER_IN_PROGRESS:
-    return { ...state,  current: {...state.current, error: null, loading: true}}; //igore is true, show edited form data
+    return { ...state,  current: {...state.current, error: null, loading: true}}; 
   case UPDATE_ORDER_SUCCESS:
      return { ...state,  current:{ ...state.current, loading: false, value: action.payload.data}};   
   case UPDATE_ORDER_FAILURE:
-     return { ...state, current: { ...state.current, error: action.payload.message, loading: false}}; //ignore is true, show edited form data
+     return { ...state, current: { ...state.current, error: action.payload.message, loading: false}};
   
   case DELETE_ORDER_IN_PROGRESS:
     return { ...state,  current:{...state.current,  error: null, loading: true, value: action.payload.data }}; //here data is an id, it's enough if we want to show a spinner
