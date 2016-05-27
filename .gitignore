@@ -1,2 +1,2 @@
-tignore
+.gitignore
 react-crud/node_modules
